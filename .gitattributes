@@ -1,5 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 # Apply override to a specific file
-jquery.js -linguist-vendored
-jcanvas.min.js -linguist-vendored
+scripts/jquery.js -linguist-vendored
+scripts/jcanvas.min.js -linguist-vendored
