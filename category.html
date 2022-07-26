@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Daniel Barroso" />
+    <meta name="description" content="The category page of Butiken" />
+    <meta name="generator" content="VS Code 1.50.1" />
+    <meta name="keywords" content="store, e-commerce, shopping, buy, sell" />
+    <meta name="robots" content="noarchive, nocache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/script.js"></script>
+    <title>Categories - Butiken</title>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <section class="site-title">
+        <section class="site-title-logo-container">
+          <figure>
+            <a href="home.html">
+              <svg class="logo">
+                <image width="100%" height="100%" href="images/logo.svg" />
+              </svg>
+            </a>
+          </figure>
+          <h1 class="site-title-text">
+            <span class="hide-character">B</span>utiken
+          </h1>
+        </section>
+        <section class="site-title-slogan-container">
+          <h2 class="site-title-slogan">
+            You never know when you might find a bargain!
+          </h2>
+        </section>
+        <section class="nav-menu-container">
+          <input
+            class="hamburger-menu-btn"
+            id="hamburger-menu-btn"
+            type="image"
+            src="images/hamburger.png"
+            alt="Hamburger menu icon"
+          />
+          <nav class="nav-menu" id="nav-menu">
+            <div class="invisible-nav-placeholder mobile-hidden-element"></div>
+            <section class="centered-nav-bar" id="main-nav-bar">
+              <ul>
+                <li><a href="home.html">Home</a></li>
+                <li class="dropdown-nav-item">
+                  <a class="active-page dropdown-btn" href="category.html"
+                    >Category</a
+                  >
+                  <section class="dropdown-container">
+                    <a href="">Clothes</a>
+                    <a href="">Electronics</a>
+                    <a href="">Health</a>
+                    <a href="">Home & Kitchen</a>
+                    <a href="">Movies & Television</a>
+                    <a href="">Sports</a>
+                  </section>
+                </li>
+                <li><a id="popular-link" href="">Most popular</a></li>
+                <li><a id="deals-link" href="">Deals</a></li>
+                <li><a href="sell.html">Sell</a></li>
+                <li class="sign-in-mobile-nav">
+                  <a id="sign-in-mobile-link" href="">Sign in</a>
+                </li>
+              </ul>
+            </section>
+            <section class="right-nav-bar mobile-hidden-element">
+              <ul>
+                <li class="sign-in-nav dropdown-nav-item">
+                  <a class="dropdown-btn" id="sign-in-link" href="">Sign in</a>
+                  <section class="dropdown-container login-container">
+                    <label for="email-input">E-mail:</label>
+                    <input type="email" name="email" id="email-input" />
+                    <label for="pw-input">Password:</label>
+                    <input type="password" name="password" id="pw-input" />
+                    <button class="lighter-button" type="submit">
+                      Sign in
+                    </button>
+                    <button type="button">Sign up</button>
+                  </section>
+                </li>
+              </ul>
+            </section>
+          </nav>
+        </section>
+      </section>
+    </header>
+
+    <main>
+      <section>
+        <section class="intro-text-container">
+          <header>
+            <h2>Butiken's categories</h2>
+          </header>
+          <p>
+            We have many different sections and product areas. Pick a category
+            or subcategory below and you will a find a wide range of things that
+            Butiken offers. We are sure you will find something for you!
+          </p>
+        </section>
+        <article class="categories-section">
+          <table class="categories-table">
+            <caption>
+              Explore our categories
+            </caption>
+            <thead>
+              <tr>
+                <th><a href="">Clothes</a></th>
+                <th><a href="">Electronics</a></th>
+                <th><a href="">Health</a></th>
+                <th><a href="">Home & Kitchen</a></th>
+                <th><a href="">Movies & Television</a></th>
+                <th><a href="">Sports</a></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="">Jackets</a></td>
+                <td><a href="">Computer & Accessories</a></td>
+                <td><a href="">Health Care</a></td>
+                <td><a href="">Furniture</a></td>
+                <td><a href="">Movies</a></td>
+                <td><a href="">Sports Clothes</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Sweaters</a></td>
+                <td><a href="">Cell Phones & Accessories</a></td>
+                <td><a href="">Medical Supplies & Equipment</a></td>
+                <td><a href="">Kitchen & Dining</a></td>
+                <td><a href="">TV Shows</a></td>
+                <td><a href="">Sports Equipment</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Shirts</a></td>
+                <td><a href="">Audio</a></td>
+                <td><a href="">Oral Care</a></td>
+                <td><a href="">Bedding</a></td>
+                <td><a href="">Kids & Family</a></td>
+                <td><a href="">Running</a></td>
+              </tr>
+              <tr>
+                <td><a href="">Pants</a></td>
+                <td><a href="">Television</a></td>
+                <td><a href="">Vitamins & Dietary Supplements</a></td>
+                <td><a href="">Lighting</a></td>
+                <td><a href="">Best Sellers</a></td>
+                <td><a href="">Swimming</a></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="6">
+                  If there's any product or category you'd like to see, don't
+                  hesitate to contact us.
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </article>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <section>
+        <p class="copyright-notice-text">© 2020 Butiken AB</p>
+      </section>
+      <section>
+        <ul>
+          <li><a id="contact-link" href="">Contact us</a></li>
+          <li><a id="about-link" href="">About</a></li>
+          <li><a id="privacy-link" href="">Privacy notice</a></li>
+          <li><a id="cou-link" href="">Conditions of Use</a></li>
+        </ul>
+      </section>
+    </footer>
+  </body>
+</html>

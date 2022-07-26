@@ -1,0 +1,1053 @@
+/*
+//////////////////////////////////////////////
+----------------CUSTOM FONTS-----------------
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/
+
+@font-face {
+  font-family: "Quicksand";
+  src: url(font/Quicksand-Regular.ttf);
+  font-weight: 400; /* Normal */
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url(font/Quicksand-Bold.ttf);
+  font-weight: 700; /* Bold */
+}
+
+/*
+//////////////////////////////////////////////
+----------------HTML ELEMENTS----------------
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/
+
+html,
+body {
+  margin: 0;
+}
+
+html {
+  font: 1em/1 "Quicksand", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  background-color: #07fade;
+  color: #000000;
+}
+
+main {
+  min-height: calc(100vh - 18.75rem);
+  padding-bottom: 6.25rem;
+}
+
+input,
+textarea {
+  font-family: "Quicksand", Arial;
+}
+
+/* Button styling */
+
+button,
+.button {
+  background-color: #07ccb5;
+  border: 1px solid #047a6d;
+  border-radius: 0.22rem;
+  box-shadow: 1px 2px black;
+  font-family: "Quicksand", Arial, sans-serif;
+  height: 1.5rem;
+}
+
+button:active,
+.button:active,
+.lighter-button:active {
+  box-shadow: 0px 0px;
+  background-color: #06b39e;
+}
+
+button:hover,
+.button:hover,
+.lighter-button:hover {
+  background-color: #3be9d5;
+}
+
+button:focus,
+.button:focus,
+.lighter-button:focus {
+  outline: none;
+  border: 2px solid #00b7ff;
+}
+
+/* 
+//////////////////////////////////////////////
+-------------------CLASSES ONLY--------------
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/
+
+.indent {
+  text-indent: 1rem;
+}
+
+.display-flex {
+  display: flex !important;
+}
+
+.hide {
+  display: none;
+}
+
+button.lighter-button {
+  background-color: #07fade;
+}
+
+span.hide-character {
+  font-size: 0;
+}
+
+canvas.go-to-top-btn {
+  cursor: pointer;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  height: 4.6875rem;
+  width: 4.6875rem;
+  border-radius: 50%;
+  border: none;
+  box-shadow: none;
+}
+
+/* 
+----------------------------------------------
+HEADER
+----------------------------------------------
+*/
+
+header.site-header {
+  width: 100%;
+  background-color: #06bda7;
+  height: 12.5rem;
+}
+
+header.site-header > section.site-title {
+  height: 100%;
+  position: relative;
+}
+
+header.site-header > section.site-title > section.site-title-logo-container {
+  height: 8rem;
+}
+
+header.site-header
+  > section.site-title
+  > section.site-title-logo-container
+  > h1.site-title-text {
+  font-size: 3rem;
+  margin: 0;
+  -webkit-text-stroke: 0.2px #000;
+  letter-spacing: 0.1875rem;
+  clear: right;
+  padding: 4rem 0 4rem 0;
+  cursor: default;
+  color: #f8fffb;
+}
+
+header.site-header
+  > section.site-title
+  > section.site-title-logo-container
+  > figure {
+  float: left;
+  margin-right: 0;
+}
+
+header.site-header
+  > section.site-title
+  > section.site-title-logo-container
+  > figure
+  > a
+  > svg.logo {
+  width: 128px;
+  height: 128px;
+}
+
+header.site-header > section.site-title > section.site-title-slogan-container {
+  clear: right;
+  height: 8rem;
+  cursor: default;
+  color: #f8fffb;
+}
+
+header.site-header
+  > section.site-title
+  > section.site-title-slogan-container
+  > h2.site-title-slogan {
+  font-style: italic;
+  font-size: 1.2rem;
+  text-shadow: 0.2px 1px #000;
+}
+
+header.site-header > section.site-title > section.nav-menu-container {
+  position: absolute;
+  width: 100%;
+  bottom: 0.125rem;
+}
+
+header.site-header
+  > section.site-title
+  > section.nav-menu-container
+  > input.hamburger-menu-btn {
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: none;
+}
+
+header.site-header
+  > section.site-title
+  > section.nav-menu-container
+  > nav.nav-menu {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+header.site-header
+  > section.site-title
+  > section.nav-menu-container
+  > nav.nav-menu
+  > div.invisible-nav-placeholder {
+  width: 5%;
+  flex: auto;
+}
+
+header.site-header
+  > section.site-title
+  > section.nav-menu-container
+  > nav.nav-menu
+  > section.centered-nav-bar {
+  width: 50%;
+  flex: auto;
+  text-align: center;
+}
+
+header.site-header
+  > section.site-title
+  > section.nav-menu-container
+  > nav.nav-menu
+  > section.right-nav-bar {
+  width: 5%;
+  flex: auto;
+  padding-right: 0.625rem;
+}
+
+header.site-header
+  > section.site-title
+  > section.nav-menu-container
+  > nav.nav-menu
+  > section
+  > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+header.site-header
+  > section.site-title
+  > section.nav-menu-container
+  > nav.nav-menu
+  > section
+  > ul
+  > li {
+  display: inline-block;
+  height: 1.875rem;
+  line-height: 1.875rem;
+  position: relative;
+}
+
+header.site-header
+  > section.site-title
+  > section.nav-menu-container
+  > nav.nav-menu
+  > section
+  > ul
+  > li.sign-in-nav {
+  float: right;
+  border: 1px solid #047a6d;
+  border-radius: 0.3125rem;
+  line-height: normal;
+}
+
+header.site-header
+  > section.site-title
+  > section.nav-menu-container
+  > nav.nav-menu
+  > section
+  > ul
+  > li.sign-in-mobile-nav {
+  display: none;
+}
+
+header.site-header
+  > section.site-title
+  > section.nav-menu-container
+  > nav.nav-menu
+  > section
+  > ul
+  > li.dropdown-nav-item
+  > a.dropdown-btn {
+  display: inline-block;
+}
+
+header.site-header
+  > section.site-title
+  > section.nav-menu-container
+  > nav.nav-menu
+  > section
+  > ul
+  > li.dropdown-nav-item:hover
+  > a.dropdown-btn,
+section.dropdown-container > a:hover {
+  background-color: #047a6d;
+  border-radius: 0.3125rem;
+}
+
+header.site-header
+  > section.site-title
+  > section.nav-menu-container
+  > nav.nav-menu
+  > section
+  > ul
+  > li.dropdown-nav-item:hover
+  > section.dropdown-container {
+  display: block;
+  min-width: 13rem;
+  border: 1px solid #047a6d;
+  box-shadow: 0px 8px 8px 1px rgba(0, 0, 0, 0.4);
+}
+
+header.site-header
+  > section.site-title
+  > section.nav-menu-container
+  > nav.nav-menu
+  > section
+  > ul
+  > li.dropdown-nav-item
+  > section.dropdown-container {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #06bda7;
+}
+
+header.site-header
+  > section.site-title
+  > section.nav-menu-container
+  > nav.nav-menu
+  > section
+  > ul
+  > li.dropdown-nav-item
+  > section.login-container {
+  color: black;
+  right: 0;
+  min-width: 15rem;
+  padding: 0.5rem;
+}
+
+header.site-header
+  > section.site-title
+  > section.nav-menu-container
+  > nav.nav-menu
+  > section
+  > ul
+  > li.dropdown-nav-item
+  > section.login-container
+  > button {
+  margin-top: 0.5rem;
+}
+
+header.site-header
+  > section.site-title
+  > section.nav-menu-container
+  > nav.nav-menu
+  > section
+  > ul
+  > li.dropdown-nav-item
+  > section.dropdown-container
+  > a {
+  display: block;
+  text-decoration: none;
+}
+
+header.site-header
+  > section.site-title
+  > section.nav-menu-container
+  > nav.nav-menu
+  > section
+  > ul
+  > li
+  > a,
+li.dropdown-nav-item > section.dropdown-container > a {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #f8fffb;
+  font-variant: small-caps;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.125rem;
+}
+
+header.site-header
+  > section.site-title
+  > section.nav-menu-container
+  > nav.nav-menu
+  > section
+  > ul
+  > li
+  > a:hover {
+  background-color: #047a6d;
+  border-radius: 0.3125rem;
+}
+
+header.site-header
+  > section.site-title
+  > section.nav-menu-container
+  > nav.nav-menu
+  > section
+  > ul
+  > li
+  > a.active-page {
+  background-color: #058f7f;
+  border-radius: 0.3125rem;
+}
+
+/* 
+----------------------------------------------
+MAIN
+----------------------------------------------
+*/
+
+main section.intro-text-container {
+  padding: 1.5rem 1rem;
+  color: rgb(105, 105, 105);
+  background-color: rgba(6, 188, 167, 0.329);
+  width: 40%;
+  line-height: 1.5rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  margin: 0 auto;
+}
+
+main section.intro-text-container > header > h2 {
+  margin-top: 0;
+}
+
+main > section.home-highlight-section {
+  width: 25rem;
+  height: 20rem;
+  margin: 2rem auto;
+}
+
+main > section.home-highlight-section > nav > section {
+  display: inline-block;
+  width: 10rem;
+  height: 10rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+main > section.home-highlight-section > nav > section > a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-decoration: underline;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-variant: small-caps;
+  line-height: 14rem;
+  background-color: #07e9cf;
+  border: 2px solid #06bda7;
+  position: relative;
+  transition: transform 0.75s, color 0.5s, background-color 1s,
+    border-radius 0.5s linear;
+}
+
+main > section.home-highlight-section > nav > section > a.home-highlight-box-1 {
+  border-top-left-radius: 2.5rem;
+  background: #07e9cf url(images/product_icon.png) center/62% no-repeat;
+}
+
+main > section.home-highlight-section > nav > section > a.home-highlight-box-2 {
+  border-top-right-radius: 2.5rem;
+  background: #07e9cf url(images/eye_icon.png) center/62% no-repeat;
+}
+
+main > section.home-highlight-section > nav > section > a.home-highlight-box-3 {
+  border-bottom-left-radius: 2.5rem;
+  background: #07e9cf url(images/category_icon.png) center/58% no-repeat;
+}
+
+main > section.home-highlight-section > nav > section > a.home-highlight-box-4 {
+  border-bottom-right-radius: 2.5rem;
+  background: #07e9cf url(images/discover_icon.png) center/58% no-repeat;
+}
+
+main > section.home-highlight-section > nav > section > a:hover {
+  color: white;
+  background-color: #08ffe2;
+  border: 2px groove #047a6d;
+  border-radius: 0;
+  transform: scale(1.1);
+}
+
+main > section > article > table.categories-table {
+  margin: 5rem auto;
+  color: black;
+  table-layout: auto;
+  border-collapse: collapse;
+  caption-side: top;
+  empty-cells: hide;
+}
+
+main > section > article > table.categories-table > caption {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 0.625rem;
+}
+
+main > section > article > table.categories-table th,
+table.categories-table td {
+  text-align: left;
+  padding: 0.3125rem 0.5rem;
+  border-right: 1px solid #06bda7;
+}
+
+main > section > article > table.categories-table th:last-child,
+table.categories-table td:last-child {
+  border-right: none;
+}
+
+main > section > article > table.categories-table a {
+  text-decoration: none;
+  color: black;
+}
+
+main > section > article > table.categories-table a:hover {
+  text-decoration: underline;
+}
+
+main > section > article > table.categories-table > tfoot > tr > td {
+  font-style: italic;
+  text-align: center;
+}
+
+main > section > article.sell-form-section {
+  margin: 5rem auto;
+  max-width: 75%;
+}
+
+main > section > article.sell-form-section > section.submit-success {
+  padding: 0.1rem 0.5rem;
+  margin: 0.5rem 0;
+  background-color: rgb(89, 255, 47);
+  border: 1px solid black;
+  border-radius: 1rem;
+  display: none;
+}
+
+main
+  > section
+  > article.sell-form-section
+  > section.submit-success
+  > .top-right-btn {
+  float: right;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.1rem;
+}
+
+main > section > article.sell-form-section aside.form-instructions-section {
+  float: left;
+  min-width: 10rem;
+  width: 25%;
+  background-color: rgba(6, 188, 167, 0.329);
+  border: 2px solid #057e70;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+
+main > section > article > form.sell-form {
+  text-align: center;
+}
+
+main > section > article > form.sell-form > fieldset {
+  display: block;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-color: #07ccb5;
+  background-color: rgba(6, 188, 167, 0.329);
+  text-align: left;
+}
+
+main > section > article > form.sell-form > fieldset.contact-fieldset {
+  display: inline-block;
+  margin-top: 0;
+  margin-left: -25%;
+}
+
+main > section > article > form.sell-form > fieldset > input {
+  display: block;
+  width: 100%;
+  height: 2.5rem;
+  margin: 0.5rem 0.25rem;
+  font-size: 1.2rem;
+  border: 2px solid #057e70;
+  border-radius: 0.5rem;
+}
+
+main > section > article > form.sell-form > fieldset > input.icon-input {
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 2rem;
+}
+
+main > section > article > form.sell-form > fieldset > input.person-icon {
+  background-image: url(images/person-icon.png);
+}
+
+main > section > article > form.sell-form > fieldset > input.location-icon {
+  background-image: url(images/globe-icon.png);
+}
+
+main > section > article > form.sell-form > fieldset > input.email-icon {
+  background-image: url(images/email-icon.png);
+}
+
+main > section > article > form.sell-form > fieldset > input.phone-icon {
+  background-image: url(images/phone-icon.png);
+}
+
+main > section > article > form.sell-form > fieldset > input:focus,
+main > section > article > form.sell-form > fieldset > textarea:focus {
+  background-color: #94f8eb;
+  outline: none;
+  border: 2px solid #00b7ff;
+}
+
+main > section > article > form.sell-form > fieldset > label.required-lbl {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+main > section > article > form.sell-form label.lbl-margin {
+  display: block;
+  margin: 1rem 0;
+}
+
+main > section > article > form.sell-form > fieldset > select {
+  border: 2px solid #057e70;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+main > section > article > form.sell-form > fieldset > textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  resize: none;
+  border: 2px solid #057e70;
+}
+
+main > section > article > form.sell-form > fieldset > section.image-drop-area {
+  margin: 1rem auto;
+  width: 15rem;
+  height: 15rem;
+  border: 3px dotted black;
+  background-color: #07fade;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+main > section > article > form.sell-form > fieldset > figure.preview-fig {
+  margin: 1rem auto;
+  width: 20rem;
+  height: 20rem;
+  display: none;
+}
+
+main
+  > section
+  > article
+  > form.sell-form
+  > fieldset
+  > figure.preview-fig
+  > img {
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+main > section > article > form.sell-form > input.button {
+  height: 4rem;
+  width: 8rem;
+  font-size: 1.6rem;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 
+----------------------------------------------
+PAGE FOOTER
+----------------------------------------------
+*/
+
+footer.page-footer {
+  width: 100%;
+  height: 6.25rem;
+  background-color: #07ccb5;
+  border-top: 3px solid #06bda7;
+  color: white;
+  text-align: center;
+}
+
+footer.page-footer > section > p.copyright-notice-text {
+  font-weight: bold;
+}
+
+footer.page-footer > section > ul {
+  display: inline-block;
+  padding: 0;
+}
+
+footer.page-footer > section > ul > li {
+  display: inline-block;
+  margin-left: 1.25rem;
+}
+
+footer.page-footer > section > ul > li::before {
+  content: "";
+  display: list-item;
+  list-style: square outside;
+  width: 0;
+  height: 0;
+}
+
+footer.page-footer > section > ul > li > a {
+  text-decoration: none;
+  color: black;
+}
+
+footer.page-footer > section > ul > li > a:hover {
+  text-decoration: underline;
+}
+
+/* 
+//////////////////////////////////////////////
+---------------MEDIA QUERIES-----------------
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+*/
+
+@media screen and (max-width: 1150px) {
+  /* 
+   //////////////////////////////////////////////
+   -------------------CLASSES-------------------
+   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  */
+
+  main > section > article.sell-form-section aside.form-instructions-section {
+    margin-bottom: 1rem;
+    float: none;
+    width: 100%;
+  }
+
+  main > section > article > form.sell-form > fieldset.product-fieldset {
+    width: 100%;
+  }
+
+  main > section > article > form.sell-form > fieldset.contact-fieldset {
+    margin-left: auto;
+  }
+}
+
+/* Tablets */
+@media screen and (max-width: 992px) {
+  /* 
+    //////////////////////////////////////////////
+    -------------------CLASSES-------------------
+    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  */
+
+  .mobile-hidden-element {
+    display: none !important;
+  }
+
+  canvas.go-to-top-btn {
+    position: static;
+    display: block;
+    margin: 0.5rem auto;
+  }
+
+  header.site-header {
+    height: auto;
+  }
+
+  header.site-header
+    > section.site-title
+    > section.site-title-slogan-container {
+    height: 4rem;
+  }
+
+  header.site-header
+    > section.site-title
+    > section.site-title-slogan-container
+    > h2.site-title-slogan {
+    font-size: 100%;
+  }
+
+  header.site-header > section.site-title > section.nav-menu-container > nav {
+    display: flex;
+  }
+
+  header.site-header
+    > section.site-title
+    > section.nav-menu-container
+    > nav.nav-menu
+    > section
+    > ul
+    > li.sign-in-mobile-nav {
+    border: 1px solid #047a6d;
+    border-radius: 0.3125rem;
+    display: inline-block;
+  }
+
+  main section.intro-text-container {
+    width: 60%;
+  }
+}
+
+/* Phones */
+@media screen and (max-width: 600px) {
+  /* 
+    //////////////////////////////////////////////
+    -------------------CLASSES-------------------
+    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+  */
+
+  header.site-header > section.site-title > section.site-title-logo-container {
+    padding: 0.5rem;
+    width: 100%;
+  }
+
+  header.site-header
+    > section.site-title
+    > section.site-title-logo-container
+    > h1.site-title-text {
+    font-size: 10vw;
+    padding: 0;
+    margin-top: calc((25vw / 2) - 5vw);
+    margin-bottom: calc((25vw / 2) - 5vw);
+  }
+
+  header.site-header
+    > section.site-title
+    > section.site-title-logo-container
+    > figure {
+    margin: 0;
+    height: 25vw;
+    width: 25vw;
+  }
+
+  header.site-header
+    > section.site-title
+    > section.site-title-logo-container
+    > figure
+    > a
+    > svg.logo {
+    width: 100%;
+    height: 100%;
+    max-height: 128px;
+  }
+
+  header.site-header
+    > section.site-title
+    > section.site-title-slogan-container {
+    margin: 2rem 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: auto;
+    text-align: center;
+  }
+
+  header.site-header > section.site-title > section.nav-menu-container {
+    position: static;
+  }
+
+  header.site-header
+    > section.site-title
+    > section.nav-menu-container
+    > input.hamburger-menu-btn {
+    display: inline-block;
+  }
+
+  header.site-header
+    > section.site-title
+    > section.nav-menu-container
+    > nav.nav-menu {
+    display: none;
+  }
+
+  header.site-header
+    > section.site-title
+    > section.nav-menu-container
+    > nav.nav-menu
+    > section
+    > ul
+    > li {
+    display: block;
+    line-height: 3.5rem;
+    height: 3.5rem;
+  }
+
+  header.site-header
+    > section.site-title
+    > section.nav-menu-container
+    > nav.nav-menu
+    > section
+    > ul
+    > li.sign-in-mobile-nav {
+    border: none;
+    border-radius: 0;
+    display: block;
+  }
+
+  header.site-header
+    > section.site-title
+    > section.nav-menu-container
+    > nav.nav-menu
+    > section
+    > ul
+    > li
+    > a,
+  li.dropdown-nav-item > section.dropdown-container > a {
+    display: block;
+    width: 100%;
+    height: 3.5rem;
+  }
+
+  header.site-header
+    > section.site-title
+    > section.nav-menu-container
+    > nav.nav-menu
+    > section
+    > ul
+    > li.dropdown-nav-item
+    > section.dropdown-container {
+    top: 3.5rem;
+  }
+
+  main section.intro-text-container {
+    width: auto;
+    margin: 0 1rem;
+  }
+
+  main > section.home-highlight-section {
+    width: 100%;
+    margin: 1rem auto;
+  }
+
+  main > section.home-highlight-section > nav {
+    text-align: center;
+  }
+
+  main > section.home-highlight-section > nav > section {
+    height: 12rem;
+    width: calc(35vw + 2rem);
+    margin: 0.5rem 0.1rem;
+  }
+
+  main > section.home-highlight-section > nav > section > a {
+    line-height: 18rem;
+    overflow: hidden;
+    font-size: 95%;
+  }
+
+  main > section.home-highlight-section > nav > section > a:hover {
+    transform: none;
+  }
+
+  main
+    > section.home-highlight-section
+    > nav
+    > section
+    > a.home-highlight-box-1 {
+    background: #07e9cf url(images/product_icon.png) center/50% no-repeat;
+  }
+
+  main
+    > section.home-highlight-section
+    > nav
+    > section
+    > a.home-highlight-box-2 {
+    background: #07e9cf url(images/eye_icon.png) center/50% no-repeat;
+  }
+
+  main
+    > section.home-highlight-section
+    > nav
+    > section
+    > a.home-highlight-box-3 {
+    background: #07e9cf url(images/category_icon.png) center/45% no-repeat;
+  }
+
+  main
+    > section.home-highlight-section
+    > nav
+    > section
+    > a.home-highlight-box-4 {
+    background: #07e9cf url(images/discover_icon.png) center/45% no-repeat;
+  }
+
+  main > section > article.categories-section {
+    overflow-x: auto;
+  }
+
+  main > section > article > table.categories-table > caption {
+    text-align: left;
+    padding-left: 1rem;
+  }
+
+  main > section > article.sell-form-section {
+    margin-bottom: 0;
+    max-width: 95%;
+  }
+
+  main > section > article > form.sell-form > fieldset > figure.preview-fig {
+    width: 100%;
+    height: 100%;
+  }
+
+  footer.page-footer {
+    height: auto;
+    margin-top: 1rem;
+  }
+
+  footer.page-footer > section > ul > li {
+    margin-bottom: 1rem;
+  }
+}

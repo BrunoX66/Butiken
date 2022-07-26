@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Daniel Barroso" />
+    <meta name="description" content="The sell form page of Butiken" />
+    <meta name="generator" content="VS Code 1.50.1" />
+    <meta name="keywords" content="store, e-commerce, shopping, buy, sell" />
+    <meta name="robots" content="noarchive, nocache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/jcanvas.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <title>Sell - Butiken</title>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <section class="site-title">
+        <section class="site-title-logo-container">
+          <figure>
+            <a href="home.html">
+              <svg class="logo">
+                <image width="100%" height="100%" href="images/logo.svg" />
+              </svg>
+            </a>
+          </figure>
+          <h1 class="site-title-text">
+            <span class="hide-character">B</span>utiken
+          </h1>
+        </section>
+        <section class="site-title-slogan-container">
+          <h2 class="site-title-slogan">
+            You never know when you might find a bargain!
+          </h2>
+        </section>
+        <section class="nav-menu-container">
+          <input
+            class="hamburger-menu-btn"
+            id="hamburger-menu-btn"
+            type="image"
+            src="images/hamburger.png"
+            alt="Hamburger menu icon"
+          />
+          <nav class="nav-menu" id="nav-menu">
+            <div class="invisible-nav-placeholder mobile-hidden-element"></div>
+            <section class="centered-nav-bar" id="main-nav-bar">
+              <ul>
+                <li><a href="home.html">Home</a></li>
+                <li class="dropdown-nav-item">
+                  <a class="dropdown-btn" href="category.html">Category</a>
+                  <section class="dropdown-container">
+                    <a href="">Clothes</a>
+                    <a href="">Electronics</a>
+                    <a href="">Health</a>
+                    <a href="">Home & Kitchen</a>
+                    <a href="">Movies & Television</a>
+                    <a href="">Sports</a>
+                  </section>
+                </li>
+                <li><a id="popular-link" href="">Most popular</a></li>
+                <li><a id="deals-link" href="">Deals</a></li>
+                <li><a class="active-page" href="sell.html">Sell</a></li>
+                <li class="sign-in-mobile-nav">
+                  <a id="sign-in-mobile-link" href="">Sign in</a>
+                </li>
+              </ul>
+            </section>
+            <section class="right-nav-bar mobile-hidden-element">
+              <ul>
+                <li class="sign-in-nav dropdown-nav-item">
+                  <a class="dropdown-btn" id="sign-in-link" href="">Sign in</a>
+                  <section class="dropdown-container login-container">
+                    <label for="email-input">E-mail:</label>
+                    <input type="email" name="email" id="email-input" />
+                    <label for="pw-input">Password:</label>
+                    <input type="password" name="password" id="pw-input" />
+                    <button class="lighter-button" type="submit">
+                      Sign in
+                    </button>
+                    <button type="button">Sign up</button>
+                  </section>
+                </li>
+              </ul>
+            </section>
+          </nav>
+        </section>
+      </section>
+    </header>
+
+    <main>
+      <section>
+        <section class="intro-text-container">
+          <header>
+            <h2>Sell on Butiken</h2>
+          </header>
+          <p>
+            Butiken offers a perfect place to set up your flea market! All the
+            things you want to get rid off and all the stuff that deserves
+            another owner can be put up for sale here. <br />
+            Get started by filling in everything needed to sell below!
+          </p>
+        </section>
+        <article class="sell-form-section">
+          <header>
+            <h2>Fill in the form to start selling</h2>
+          </header>
+          <section class="submit-success" id="submit-success">
+            <span class="top-right-btn" id="close-success-message">X</span>
+            <header>
+              <h3>Your listing has been successfully submitted!</h3>
+            </header>
+            <p>
+              Our team will review the request to make sure that it is in
+              compliance with our <strong>terms</strong> and
+              <strong>conditions</strong>.<br />
+              As soon as it's accepted it will be available here on the website.
+              A link will be emailed to you or if you already have an account,
+              you can find it on your profile under the 'Listings' tab.
+            </p>
+          </section>
+          <aside class="form-instructions-section">
+            <header>
+              <h3>Instructions to selling</h3>
+            </header>
+            <p>
+              Are you ready to sell? Great!
+              <br /><br />
+              There's a couple of things things to remember and just a few
+              fields of information that needs to be filled in. After that's
+              done you can place your things for sale on the market.
+              <br /><br />
+              To ensure that your listing is appropriate, do the following:
+            </p>
+            <dl>
+              <dt>Privacy Notice</dt>
+              <dd>
+                Read our <i>privacy notice</i> to understand how we handle your
+                personal data
+              </dd>
+              <dt>Conditions of Use</dt>
+              <dd>
+                Read our <i>CoU</i> to comply with our rules and guidelines
+              </dd>
+            </dl>
+            <p>
+              We will ask you for some info to be able to create your listing:
+            </p>
+            <ol>
+              <li>Your contact information and location</li>
+              <li>Title and description of the thing(s) you're selling</li>
+              <li>Optional: An image of the thing(s)</li>
+            </ol>
+            <p>Follow this simple form and start selling!</p>
+          </aside>
+          <form class="sell-form" id="sell-form">
+            <fieldset class="contact-fieldset">
+              <legend>Your contact information as seller</legend>
+              <label class="required-lbl">* Required</label>
+              <label for="fname-input">First name: *</label>
+              <input
+                type="text"
+                name="fname"
+                class="icon-input person-icon"
+                id="fname-input"
+                placeholder="e.g. John"
+                title="Enter your first name"
+                autofocus
+                required
+              />
+              <label for="lname-input">Last name: *</label>
+              <input
+                type="text"
+                name="lname"
+                class="icon-input person-icon"
+                id="lname-input"
+                placeholder="e.g. Doe"
+                title="Enter your last name"
+                required
+              />
+              <label for="city-input">City: *</label>
+              <input
+                type="text"
+                name="city"
+                class="icon-input location-icon"
+                id="city-input"
+                placeholder="e.g. Stockholm"
+                title="Enter the city you are located at"
+                required
+              />
+              <label for="postal-code-input">Postal code: *</label>
+              <input
+                type="number"
+                name="postalCode"
+                class="icon-input location-icon"
+                id="postal-code-input"
+                placeholder="e.g. 12345"
+                title="Enter your postal code"
+                max="99999"
+                required
+              />
+              <label for="country-input">Country: *</label>
+              <input
+                type="text"
+                name="country"
+                class="icon-input location-icon"
+                id="country-input"
+                list="country-list"
+                placeholder="e.g. Sweden"
+                title="Enter the name of your country"
+                pattern="[a-zA-Z\s]+"
+                required
+              />
+
+              <datalist id="country-list">
+                <option value="Sweden"></option>
+                <option value="Norway"></option>
+                <option value="Finland"></option>
+                <option value="Denmark"></option>
+              </datalist>
+
+              <label for="seller-email-input">Email: *</label>
+              <input
+                type="email"
+                name="email"
+                class="icon-input email-icon"
+                id="seller-email-input"
+                placeholder="example@example.com"
+                title="Enter your email address"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                required
+              />
+
+              <label class="lbl-margin">
+                Subscribe to Butiken's newsletter?
+                <input
+                  type="checkbox"
+                  name="newsletter"
+                  value="subscribe"
+                  id="newsletter-checkbox"
+                  title="Check the box to subscribe to our newsletter"
+                  checked
+                />
+              </label>
+
+              <label for="phone-number-input">Phone number:</label>
+              <select
+                id="country-code-select"
+                name="countryCode"
+                title="Select the country calling code of your phone number - we only support Sweden, Denmark, Finland, Norway"
+              >
+                <option value="" selected disabled>Country code</option>
+                <optgroup label="Country">
+                  <option value="denmark">+45</option>
+                  <option value="sweden">+46</option>
+                  <option value="norway">+47</option>
+                  <option value="finland">+358</option>
+                </optgroup>
+              </select>
+              <input
+                type="tel"
+                name="phoneNumber"
+                class="icon-input phone-icon"
+                id="phone-number-input"
+                placeholder="e.g. 070 000 00 00"
+                title="Enter your phone number"
+                size="14"
+                maxlength="14"
+              />
+            </fieldset>
+
+            <fieldset class="product-fieldset">
+              <legend>Product to sell</legend>
+              <label class="required-lbl">* Required</label>
+              <label for="title-input">Title for your listing: *</label>
+              <input
+                type="text"
+                name="title"
+                id="title-input"
+                placeholder="e.g. White bookshelf, barely used"
+                title="Enter an appropriate title for people to find your listing"
+                required
+              />
+              <label for="price-input">Price (EUR): *</label>
+              <input
+                type="number"
+                name="price"
+                id="price-input"
+                placeholder="e.g. 20"
+                title="Set the price you want to sell the product for"
+                required
+              />
+              <label for="description-input">Description: *</label>
+              <textarea
+                name="description"
+                id="description-input"
+                cols="50"
+                rows="10"
+                placeholder="Describe what you're selling..."
+                title="Enter a detailed description of the product(s) you're selling"
+                required
+              ></textarea>
+
+              <label for="img-input"
+                >Optional - Attach an image of the product(s) you're
+                selling:</label
+              >
+              <input
+                type="file"
+                id="img-input"
+                name="image"
+                title="Attach an image of what you're selling"
+                accept="image/*"
+              />
+              <label class="mobile-hidden-element"
+                >Or drag and drop the image file directly:</label
+              >
+              <section
+                class="mobile-hidden-element image-drop-area"
+                id="image-drop-area"
+              >
+                <header>
+                  <h3>Drop your image file in this box</h3>
+                </header>
+              </section>
+              <figure class="preview-fig" id="preview-fig">
+                <img
+                  id="preview-img"
+                  src="data:,"
+                  alt="Uploaded image of product to sell"
+                />
+                <figcaption>A preview of your uploaded image.</figcaption>
+              </figure>
+            </fieldset>
+            <label class="lbl-margin">
+              By submitting this form you agree to the <em>terms</em> and
+              <em>conditions</em> set in the Privacy Notice and
+              <abbr title="Conditions of Use">CoU</abbr>.
+            </label>
+            <input
+              class="button"
+              id="submit-btn"
+              type="submit"
+              value="Submit"
+            />
+          </form>
+        </article>
+      </section>
+    </main>
+
+    <canvas
+      class="button go-to-top-btn"
+      id="go-to-top-btn"
+      title="Go to top of the page"
+    ></canvas>
+
+    <footer class="page-footer">
+      <section>
+        <p class="copyright-notice-text">© 2020 Butiken AB</p>
+      </section>
+      <section>
+        <ul>
+          <li><a id="contact-link" href="">Contact us</a></li>
+          <li><a id="about-link" href="">About</a></li>
+          <li><a id="privacy-link" href="">Privacy notice</a></li>
+          <li><a id="cou-link" href="">Conditions of Use</a></li>
+        </ul>
+      </section>
+    </footer>
+  </body>
+</html>

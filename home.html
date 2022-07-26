@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Daniel Barroso" />
+    <meta name="description" content="The home page of Butiken" />
+    <meta name="generator" content="VS Code 1.50.1" />
+    <meta name="keywords" content="store, e-commerce, shopping, buy, sell" />
+    <meta name="robots" content="noarchive, nocache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/script.js"></script>
+    <title>Butiken</title>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <section class="site-title">
+        <section class="site-title-logo-container">
+          <figure>
+            <a href="home.html">
+              <svg class="logo">
+                <image width="100%" height="100%" href="images/logo.svg" />
+              </svg>
+            </a>
+          </figure>
+          <h1 class="site-title-text">
+            <span class="hide-character">B</span>utiken
+          </h1>
+        </section>
+        <section class="site-title-slogan-container">
+          <h2 class="site-title-slogan">
+            You never know when you might find a bargain!
+          </h2>
+        </section>
+        <section class="nav-menu-container">
+          <input
+            class="hamburger-menu-btn"
+            id="hamburger-menu-btn"
+            type="image"
+            src="images/hamburger.png"
+            alt="Hamburger menu icon"
+          />
+          <nav class="nav-menu" id="nav-menu">
+            <div class="invisible-nav-placeholder mobile-hidden-element"></div>
+            <section class="centered-nav-bar" id="main-nav-bar">
+              <ul>
+                <li><a class="active-page" href="home.html">Home</a></li>
+                <li class="dropdown-nav-item">
+                  <a class="dropdown-btn" href="category.html">Category</a>
+                  <section class="dropdown-container">
+                    <a href="">Clothes</a>
+                    <a href="">Electronics</a>
+                    <a href="">Health</a>
+                    <a href="">Home & Kitchen</a>
+                    <a href="">Movies & Television</a>
+                    <a href="">Sports</a>
+                  </section>
+                </li>
+                <li><a id="popular-link" href="">Most popular</a></li>
+                <li><a id="deals-link" href="">Deals</a></li>
+                <li><a href="sell.html">Sell</a></li>
+                <li class="sign-in-mobile-nav">
+                  <a id="sign-in-mobile-link" href="">Sign in</a>
+                </li>
+              </ul>
+            </section>
+            <section class="right-nav-bar mobile-hidden-element">
+              <ul>
+                <li class="sign-in-nav dropdown-nav-item">
+                  <a class="dropdown-btn" id="sign-in-link" href="">Sign in</a>
+                  <section class="dropdown-container login-container">
+                    <label for="email-input">E-mail:</label>
+                    <input type="email" name="email" id="email-input" />
+                    <label for="pw-input">Password:</label>
+                    <input type="password" name="password" id="pw-input" />
+                    <button class="lighter-button" type="submit">
+                      Sign in
+                    </button>
+                    <button type="button">Sign up</button>
+                  </section>
+                </li>
+              </ul>
+            </section>
+          </nav>
+        </section>
+      </section>
+    </header>
+
+    <main>
+      <section class="intro-text-container">
+        <header>
+          <h2>Welcome to Butiken<span id="fname-greeting"></span></h2>
+        </header>
+        <article>
+          <header>
+            <h3 class="indent">- We're glad to have you here.</h3>
+          </header>
+          <p>
+            Butiken is an online store for people who seek top quality products
+            for low prices.<br />We're also a second-<wbr />hand platform for
+            those who want to sell their stuff or just shop around for some used
+            but worthy things.
+          </p>
+        </article>
+      </section>
+      <section class="home-highlight-section">
+        <nav>
+          <section>
+            <a
+              class="home-highlight-box-1 home-highlight-hover"
+              id="todays-product-link"
+              href=""
+            >
+              <header>
+                <h4>Product of the day</h4>
+              </header>
+            </a>
+          </section>
+          <section>
+            <a
+              class="home-highlight-box-2 home-highlight-hover"
+              id="most-viewed-link"
+              href=""
+            >
+              <header>
+                <h4>Most viewed</h4>
+              </header>
+            </a>
+          </section>
+          <section>
+            <a
+              class="home-highlight-box-3 home-highlight-hover"
+              href="category.html"
+            >
+              <header>
+                <h4>Categories</h4>
+              </header>
+            </a>
+          </section>
+          <section>
+            <a
+              class="home-highlight-box-4 home-highlight-hover"
+              id="discover-link"
+              href=""
+            >
+              <header>
+                <h4>Discover</h4>
+              </header>
+            </a>
+          </section>
+        </nav>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <section>
+        <p class="copyright-notice-text">© 2020 Butiken AB</p>
+      </section>
+      <section>
+        <ul>
+          <li><a id="contact-link" href="">Contact us</a></li>
+          <li><a id="about-link" href="">About</a></li>
+          <li><a id="privacy-link" href="">Privacy notice</a></li>
+          <li><a id="cou-link" href="">Conditions of Use</a></li>
+        </ul>
+      </section>
+    </footer>
+  </body>
+</html>
